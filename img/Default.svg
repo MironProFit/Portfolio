@@ -1,0 +1,15 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip2_2251">
+			<rect id="icon-grid" rx="0.000000" width="23.000000" height="23.000000" transform="translate(8.500000 8.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Default" rx="19.500000" width="39.000000" height="39.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="1.000000"/>
+	<rect id="icon-grid" rx="0.000000" width="23.000000" height="23.000000" transform="translate(8.500000 8.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip2_2251)">
+		<path id="Shape" d="M10 11C10 10.44 10.44 10 11 10L18 10C18.55 10 19 10.44 19 11L19 18C19 18.55 18.55 19 18 19L11 19C10.44 19 10 18.55 10 18L10 11ZM21 11C21 10.44 21.44 10 22 10L29 10C29.55 10 30 10.44 30 11L30 18C30 18.55 29.55 19 29 19L22 19C21.44 19 21 18.55 21 18L21 11ZM12 12L12 17L17 17L17 12L12 12ZM23 12L23 17L28 17L28 12L23 12ZM10 22C10 21.44 10.44 21 11 21L18 21C18.55 21 19 21.44 19 22L19 29C19 29.55 18.55 30 18 30L11 30C10.44 30 10 29.55 10 29L10 22ZM21 22C21 21.44 21.44 21 22 21L29 21C29.55 21 30 21.44 30 22L30 29C30 29.55 29.55 30 29 30L22 30C21.44 30 21 29.55 21 29L21 22ZM12 23L12 28L17 28L17 23L12 23ZM23 23L23 28L28 28L28 23L23 23Z" fill="#292F36" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

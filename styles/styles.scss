@@ -1,0 +1,47 @@
+@import 'font';
+@import 'mixins';
+@import 'variables';
+@import 'main';
+
+
+body {
+    font-family: "Neuropol";
+    font-size: 24px;
+    color: $white;
+    box-sizing: border-box;
+    background: $bg-dark;
+    margin: 0;
+    padding: 0;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        padding: 0;
+    }
+    ul {
+        list-style-type: none;
+    }
+
+    }
+    a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        &:visited {
+            color: inherit;
+        }
+        &:active {
+            color: inherit;
+        }
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.center {
+    padding-left: calc(50% - 810px);
+    padding-right: calc(50% - 810px);
+}
+
+@import 'tablet';
+

@@ -1,0 +1,20 @@
+<svg width="144.000000" height="144.000000" viewBox="0 0 144 144" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip12_410">
+			<rect id="html5" rx="0.000000" width="63.000000" height="63.000000" transform="translate(40.500000 40.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip12_379">
+			<rect id="Icon" rx="71.500000" width="143.000000" height="143.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Icon" rx="71.500000" width="143.000000" height="143.000000" transform="translate(0.500000 0.500000)" fill="#E54F26" fill-opacity="1.000000"/>
+	<g clip-path="url(#clip12_379)">
+		<rect id="html5" rx="0.000000" width="63.000000" height="63.000000" transform="translate(40.500000 40.500000)" fill="#FFFFFF" fill-opacity="0"/>
+		<g clip-path="url(#clip12_410)">
+			<path id="Vector" d="M50.43 48L50.62 50.18L54.12 89.75L54.25 91.12L55.56 91.5L71.43 95.93L71.93 96.06L72.5 95.93L88.37 91.56L89.68 91.18L89.81 89.81L93.37 50.18L93.56 48.06L91.37 48.06L52.62 48L50.43 48ZM54.81 52L89.18 52.06L85.93 88.06L72 91.93L58 88.06L54.81 52ZM59.62 58L60.93 72.93L78.06 72.93L77.5 79.37L72 80.87L71.93 80.87L66.43 79.37L66.12 75.25L61.12 75.25L61.81 83.18L71.93 86L72 86L82.12 83.18L83.5 68L65.43 68L65 62.93L83.93 62.93L84.37 58L59.62 58Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+		</g>
+	</g>
+</svg>
