@@ -222,7 +222,7 @@
     border: none;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
     box-shadow: -2px 3px 16px 2px $accent-dark;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 5.344%, rgb(173 171 171 / 99%) 59.542%, rgb(236 236 236 / 99%) 98.779%, rgba(172, 168, 168, 0.99) 100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 5.344%, rgba(102, 101, 101, 0.99) 59.542%, rgba(179, 178, 178, 0.99) 98.779%, rgba(0, 0, 0, 0.99) 100%);
     background-size: 200% 200%;
     background-position: 50% 50%;
     transition: background-position $tr, box-shadow $tr, clip-path $tr;
@@ -255,6 +255,9 @@
     align-items: center;
     justify-content: center;
     gap: 58px;
+    // width: 100px;
+    // height: 100%;
+    // background: $accent-gray;
 
 
 }
@@ -347,12 +350,25 @@
     }
 }   
 
-.about-description {
-    position: absolute;
-    top: 50px;
-    left: 400px;
+.about-modal {
+    opacity: 0;
     display: none;
-    max-width: 800px;
+    transition: opacity $tr;
+    
+    &.active {
+        @include block-style;
+        opacity: 1;
+        width: inherit;
+        top: 50%;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: radial-gradient(circle, rgba(124, 252, 0, 0.4), rgba(82, 125, 139, 0.4));
+
+        color: $white;
+        z-index: 1001;
+    }
+    
 }
 
 .about-card__img {

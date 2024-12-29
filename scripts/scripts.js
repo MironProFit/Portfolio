@@ -1,3 +1,4 @@
+// Бургер меню
 
 function toggleMenu() {
     
@@ -8,45 +9,38 @@ function toggleMenu() {
     burger.classList.toggle('active');
 }
 
-// function toggleCard(card) {
-//     const allCards = document.querySelectorAll('.about-card');
-//     const isExpanded = card.classList.toggle('expanded');
+// Модальное окно на каждую карточку
+const overlay = document.querySelector('.overlay');
 
-//     // Находим блок описания внутри текущей карточки
-//     const description = card.querySelector('.about-description');
+document.querySelectorAll('.about-card__btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        const modal = document.getElementById(modalId); 
+        if (modal) {
+        modal.classList.add('active');
+        overlay.classList.add('show'); // Показать затемнение
+        }
+        console.log(modalId);
+        console.log(modal);
+    });
+});
 
-//     if (isExpanded) {
-//         allCards.forEach(c => {
-//             if (c !== card) {
-//                 c.style.display = 'none';  // Скрываем все остальные карты
-//             }
-//         });
-//         card.style.display = 'flex';  // Убедимся, что текущая карта отображается
-//         // Показываем блок описания
-//         if (description) {
-//             description.style.display = 'block';  // Отображаем описание
+document.querySelectorAll('.about-modal__btn.close').forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.about-modal'); // Ищем модальное окно по классу
+        overlay.classList.remove('show'); // Скрыть затемнение
+        modal.classList.remove('active');
+    });
+});
+
+// Закрытие модального окна при клике вне него
+// window.onclick = function(event) {
+//     // Получаем все активные модальные окна
+//     const modals = document.querySelectorAll('.about-modal.active');
+//     modals.forEach(modal => {
+//         // Проверяем, был ли клик вне модального окна
+//         if (!modal.contains(event.target)) {
+//             modal.classList.remove('active'); // Закрываем модальное окно
 //         }
-//     } else {
-//         // Если карта закрыта, возвращаем все карты в исходное состояние
-//         allCards.forEach(c => {
-//             c.style.display = 'flex';
-//             c.classList.remove('expanded');
-//             // Прячем описание для любой закрытой карты
-//             const desc = c.querySelector('.about-description');
-//             if (desc) {
-//                 desc.style.display = 'none'; // Скрываем описание
-//             }
-//         });
-//     }
+//     });
 // }
-
-function openModal(content) {
-    document.getElementById('modalText').innerText = content;
-    document.getElementById('myModal').style.display = "block";
-}
-
-function closeModal() {
-    document.getElementById('myModal').style.display = "none";
-}
-
-
