@@ -7,6 +7,7 @@
 body {
     font-family: "aireexterior";
     font-size: 24px;
+    font-size: clamp(24px, 5vw, 16px);
     color: $white;
     box-sizing: border-box;
     background: $accent-dark;
@@ -39,8 +40,8 @@ body {
 }
 
 .center {
-    padding-left: calc(50% - 810px);
-    padding-right: calc(50% - 810px);
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
 }
 
 @import 'tablet';

@@ -1,7 +1,7 @@
 @media (max-width: 1820px) {
     .center {
-        padding-left: calc(50% - 704px);
-        padding-right: calc(50% - 704px);
+        padding-left: calc(50% - 920px);
+        padding-right: calc(50% - 920px);
     }
 }
 
@@ -9,5 +9,15 @@
     .center {
         padding-left: calc(50% - 600px);
         padding-right: calc(50% - 600px);
+    }
+}
+@media (max-width: 1150px) {
+    .about {
+        &-box {
+        flex-direction: column;
+        }
+        &-card {
+            width: 100%;
+        }
     }
 }
