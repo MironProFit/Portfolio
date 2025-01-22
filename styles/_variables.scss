@@ -1,11 +1,6 @@
-$bg-light: #292F36;
-$bg-dark: #000;
-
-$accent-saturated: #86d802;
-$accent-pale: #fcfe01;
-
-// $accent-saturated: #01ff01;
-// $accent-pale: #e5ff04;
+$accent-light: #7CFC00;
+$accent-dark: #1E1E1E;
+$accent-gray: #2C2C2C;
 
 $gray: #43454D;
 $light: #8c8d90;
@@ -17,3 +12,38 @@ $js: #E7A020;
 $react: #28A9E0;
 
 $tr:  0.3s;
+$trbg: 1s;
+
+.overlay {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
+    opacity: 0;
+    transition: $trbg;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity $trbg ease;
+            }
+
+}
+.img{
+    &--one{
+        height: clamp(80px, 4vw, 200px);
+        width: clamp(80px, 4vw, 200px);
+    }
+    &--four {
+        height: clamp(50px, 4vw, 60px);
+        width: clamp(50px, 4vw, 60px);
+
+    }
+}
+
+

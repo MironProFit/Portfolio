@@ -5,11 +5,11 @@
 
 
 body {
-    font-family: "Neuropol";
-    font-size: 24px;
+    font-family: "aireexterior";
+    // font-size: clamp(16px, 2.4vw, 24px);
     color: $white;
     box-sizing: border-box;
-    background: $bg-dark;
+    background: $accent-dark;
     margin: 0;
     padding: 0;
 
@@ -39,8 +39,8 @@ body {
 }
 
 .center {
-    padding-left: calc(50% - 810px);
-    padding-right: calc(50% - 810px);
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
 }
 
 @import 'tablet';

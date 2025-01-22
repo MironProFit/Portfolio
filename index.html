@@ -4,60 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>Мои работы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header-hero center" id="header">
-        <div class="header-hero">
-            <div class="header">
-                <a class="header__logo">Miron ProFit</a>
-                <div class="header__nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="" class="nav__item-link">Обо мне</a></li>
-                        <li class="nav__item"><a href="" class="nav__item-link">Мои проекты</a></li>
-                        <li class="nav__item"><a href="" class="nav__item-link">Навыки</a></li>
-                        <li class="nav__item"><a href="" class="nav__item-link">Связь со мной</a></li>
-                    </ul>
-                </div>
+    <header id="header">
+        <div class="header center ">
+            <a class="header__logo">Miron ProFit</a>
+            <div class="header__burger" onclick="toggleMenu()">
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
             </div>
+                <ul class="nav__list" id="menu">
+                    <li class="nav__item"><a href="" class="nav__item-link">Обо мне</a></li>
+                    <li class="nav__item"><a href="" class="nav__item-link">Мои проекты</a></li>
+                    <li class="nav__item"><a href="" class="nav__item-link">Навыки</a></li>
+                    <li class="nav__item"><a href="" class="nav__item-link">Связь со мной</a></li>
+                </ul>
         </div>
-        <div class="hero">
-            <h1 class="hero__title">Добро пожаловать в мое портфолио!</h1>
             <div class="hero__blog-box">
                 <div class="hero__about">
-                    <p class="hero__discription"><span>О себе:</span>
-                        Я — Мирон, начинающий web-разработчик. Мое погружение в мир кода началось в августе 2024 года, когда я решил изменить свою основную профессию электрика на что-то более творческое и технологичное. Я стремлюсь создавать уникальные решения и красивые визуализации, которые не только решают задачи, но и приносят удовольствие пользователю.</p>
-                        <p class="hero__discription">Я активно изучаю языки программирования, такие как HTML, CSS и JavaScript, и продолжаю развивать свои навыки в современных фреймворках, таких как React и Vue.js. Я верю, что комбинация логики и творчества — это ключ к созданию успешных веб-приложений.</p>
                 </div>
                 <div class="hero__info"></div>
-                <img src="./img/me.jpg" alt="это я" class="hero__img">
             </div>
-
-                <p class="hero__discription"><span>Моя цель:</span> Cтать высококлассным разработчиком, который способен реализовать любой проект от идеи до конечного продукта. Я стремлюсь к постоянному обучению и развитию, чтобы оставаться в курсе последних технологий и тенденций в веб-разработке. Мне интересно работать в команде и обмениваться знаниями с другими, чтобы создавать более качественные и интересные проекты.
-                </p>
-
-                <div class="discriptiona__box">
-                    <p class="hero__discription"><span>Технические навыки:</span> 
-                    <ul class="discription__list">
-                        <li class="discription__list-item">Языки программирования: HTML, CSS, JavaScript</li>
-                        <li class="discription__list-item">Фреймворки: React, Vue.js</li>
-                        <li class="discription__list-item">Инструменты: Git, Figma, Visual Studio Code</li>
-                    </ul>
-                    </p>
-                </div>
-
-                <p class="hero__discription"><span>Мои проекты:</span> 
-                Представлены только теми работами, которые были заданы в учебе. Я старательно изучал основы технологий, участвовал в практических заданиях и погружался в детали каждого проекта. Это позволило мне понять базовые принципы разработки. 
-
-                <p class="hero__discription">Я также стремился развивать свои проекты, добавляя новые функции и улучшая их, что показывает мою инициативу и желание учиться. В будущем планирую создать онлайн-портфолио, чтобы продемонстрировать свои навыки работодателям. </p>
-
-                <p class="hero__discription">Кроме того, я активно ищу вдохновение в работах других разработчиков и принимаю участие в сообществах, что помогает мне расширять свои знания и опыт. </p>
-            </p>
-                
-            
         </div>
     </header>
+    <section class="hero center">
+        <div class="hero__img-bg">
+            <h1 class="hero__title">Приветствую вас в мире моего творчества!</h1>
+            <div class="hero__box">
+                <p class="hero__subtitle">Забрел в мой уютный уголок интернета? Приготовься к увлекательному путешествию по моему портфолио!</p>
+            </div>
+            <button class="hero__corner-btn">let's go!</button>
+        </div>
+    </section>
 
+    <section class="about center">
+        <h2 class="about-title title-h2">Немного о себе</h2>
+        <div class="about-box">
+<!-- карта 1 -->
+            <div class="about-card">
+                <h3 class="about-card__title">Мой старт в веб-разработке</h3>
+                <div class="about-card__img" ><img class="img--one" src="./img/rocket.svg" alt="Rocket"></div>
+                <div class="about-card__filling">Начало и мотивация</div>
+                <button class="about-card__btn" data-modal="modal-1">More</button>
+            </div>
+            <div class="overlay"></div>
+            <div class="about-modal" id="modal-1">
+                <div class="about-modal__text">
+                    <p>С 2009 года я работал электриком на Севере, и хотя этот опыт дал мне много полезных навыков, холод и физический труд начали утомлять. Каждый день я поднимался рано, чтобы установить освещение в новых домах или ремонтировать электропроводку на стройплощадках. Моя жизнь текла в привычной рутине, и я всё чаще мечтал о чем-то большем, о том, чтобы работать в тепле и не зависеть от погоды.</p>
+                    <p>В мае 2024 года я наконец собрался с силами и решил изменить свою судьбу. Вдохновленный историей друга-веб-разработчика, я начал изучать программирование и погружаться в мир технологий. Я понял, что хочу создавать что-то новое, а не просто выполнять физическую работу. Вскоре я запустил свой первый проект, и жизнь, казалось, заиграла новыми красками. Я больше не чувствовал себя привязанным к дому на Севере — наконец-то я смотрел вперед с надеждой.</p></div>
+                <button class="about-modal__btn about-card__btn close">Close</button>
+            </div>
+<!-- карта 2 -->
+            <div  class="about-card">
+                <h3 class="about-card__title">Мои навыки</h3>
+                <div class="about-card__img" src="" alt="">
+                <div class="about-card__img-tools"><img class="img--four" width="100px" src="./img/css3.svg" alt=""><img class="img--four" width="100px" src="./img/html5.svg" alt=""><img class="img--four" width="100px" src="./img/node-js.svg" alt=""><img class="img--four" width="100px" src="./img/react.svg" alt=""></div>
+                </div>
+                <div class="about-card__filling">Владение HTML, Css, JavaScript, Git, Figma, Visual Studio Code.</div>
+                <button class="about-card__btn" data-modal="modal-2">More</button>
+            </div>
+
+            <div class="about-modal" id="modal-2">
+                <div class="about-modal__text">
+                    <p>В процессе изучения фронтенд-разработки я значительно расширил свои навыки, освоив HTML, CSS и JavaScript. Эти языки стали для меня основными инструментами в создании веб-страниц. HTML позволяет структурировать контент, а CSS придает ему стиль и привлекательный внешний вид. JavaScript добавляет интерактивности, позволяя создавать динамичные пользовательские интерфейсы. Я с удовольствием применял эти технологии в проектах, что помогло мне глубже понять их синергию и важность в веб-разработке.</p>
+                    <p>Кроме того, я научился эффективно использовать Git для контроля версий, что стало незаменимым навыком в групповых проектах. Данный инструмент помогает мне отслеживать изменения и управлять кодом. Я также освоил Figma, что позволило мне воплощать идеи в дизайнерских макетах, а затем переносить их в Visual Studio Code для реализации. Эти навыки не только обогатили мой опыт, но и укрепили мою уверенность в разработке качественных веб-приложений.</p></div>
+                <button class="about-modal__btn about-card__btn close" data-modal="modal-2">Close</button>
+            </div>
+<!-- карта 3 -->
+            <div  class="about-card">
+                <h3 class="about-card__title">Обучение и перспективы</h3>
+                <div class="about-card__img img--one">
+                <img src="./img/vector.svg" alt="">
+                </div>
+                <div class="about-card__filling">Будущее через обучение</div>
+                <button class="about-card__btn" data-modal="modal-3">More</button>
+            </div>
+
+            <div class="about-modal" id="modal-3">
+                <div class="about-modal__text">
+                    <p>Далее я планирую углубить свои знания в языках программирования, таких как Python и Java. Изучение Python откроет для меня новые горизонты, особенно в области машинного обучения и анализа данных. Я вижу огромный потенциал в применении этого языка для автоматизации задач и создания приложений, что сделает меня более универсальным специалистом. Java, в свою очередь, позволит мне работать с крупными корпоративными системами и разрабатывать мобильные приложения для Android, что значительно расширит мои профессиональные возможности.</p>
+                    <p>Кроме того, я намерен продолжать обучение в сфере веб-разработки, осваивая фреймворки, такие как React и Angular. Эти технологии помогут мне создавать более сложные и интерактивные интерфейсы, что станет важным шагом в моей карьере. Я верю, что постоянное обучение и совершенствование навыков обеспечат мне яркие перспективы в быстро развивающемся мире технологий и позволят достигать новых вершин в моей профессиональной деятельности.</p></div>
+                <button class="about-modal__btn about-card__btn close">Close</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="slider center">
+        <h2 class="title-h2">Мои проекты</h2>
+        <div class="slider-wrapper">
+            <div class="slider-box">
+                
+                
+
+                <div class="slides">
+                    <div class="slide">
+                        <img class="slides-img" src="./img/Game.jpeg" alt="" onclick="openFullScreen(this)">
+                        <a href="https://github.com/MironProFit/2-course" class="slides-github">
+                <svg width="50px" height="50px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" class="github" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-svg">
+                
+                </path>
+                </g>
+                        </g>
+                    </g>
+                </svg></a>
+                    </div>
+                    <div class="slide">
+                        <img class="slides-img" src="./img/online_shop.jpeg" alt="" onclick="openFullScreen(this)">
+                        <a href="https://github.com/MironProFit/Online-story" class="slides-github"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="50px" height="50px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" class="github" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]">
+                
+                </path>
+                </g>
+                        </g>
+                    </g>
+                </svg></a>
+                    </div>
+                    <div class="slide">
+                        <img class="slides-img" src="./img/Music.jpeg" alt="" onclick="openFullScreen(this)">
+                        <a href="https://github.com/MironProFit/Music" class="slides-github"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="50px" height="50px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" class="github" transform="translate(-140.000000, -7559.000000)" fill="#000000">
+                <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#142]">
+                
+                </path>
+                </g>
+                        </g>
+                    </g>
+                </svg></a>
+                    </div>
+                
+                
+                </div>
+                
+            </div>
+            <div class="slider-btn">
+                <div id="prev" class="btn__slider left">
+                    <div class="btn__slider-arrow__left" onclick="changeSlide(-1)">
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg id="arrow_size_left" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                        <g id="arrow_left" sketch:type="MSLayerGroup" transform="translate(-412.000000, -983.000000)" fill="#000000">
+                <path d="M434,998 L423.414,998 L427.535,993.879 C427.926,993.488 427.926,992.855 427.535,992.465 C427.145,992.074 426.512,992.074 426.121,992.465 L420.465,998.121 C420.225,998.361 420.15,998.689 420.205,999 C420.15,999.311 420.225,999.639 420.465,999.879 L426.121,1005.54 C426.512,1005.93 427.145,1005.93 427.535,1005.54 C427.926,1005.15 427.926,1004.51 427.535,1004.12 L423.414,1000 L434,1000 C434.553,1000 435,999.553 435,999 C435,998.448 434.553,998 434,998 L434,998 Z M442,1011 C442,1012.1 441.104,1013 440,1013 L416,1013 C414.896,1013 414,1012.1 414,1011 L414,987 C414,985.896 414.896,985 416,985 L440,985 C441.104,985 442,985.896 442,987 L442,1011 L442,1011 Z M440,983 L416,983 C413.791,983 412,984.791 412,987 L412,1011 C412,1013.21 413.791,1015 416,1015 L440,1015 C442.209,1015 444,1013.21 444,1011 L444,987 C444,984.791 442.209,983 440,983 L440,983 Z" id="arrow-left-square" sketch:type="MSShapeGroup">
+                
+                </path>
+                        </g>
+                    </g>
+                </svg>
+                    </div>
+                </div>
+                <div id="next" class="btn__slider right">
+                    <div class="btn__slider-arrow__right" onclick="changeSlide(1)">
+                
+                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <svg id="arrow_size_right" width="800px" height="800px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                
+                        </defs>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                                <g id="arrow_right" sketch:type="MSLayerGroup" transform="translate(-464.000000, -983.000000)" fill="#000000">
+                                    <path d="M494,1011 C494,1012.1 493.104,1013 492,1013 L468,1013 C466.896,1013 466,1012.1 466,1011 L466,987 C466,985.896 466.896,985 468,985 L492,985 C493.104,985 494,985.896 494,987 L494,1011 L494,1011 Z M492,983 L468,983 C465.791,983 464,984.791 464,987 L464,1011 C464,1013.21 465.791,1015 468,1015 L492,1015 C494.209,1015 496,1013.21 496,1011 L496,987 C496,984.791 494.209,983 492,983 L492,983 Z M487.535,998.121 L481.879,992.465 C481.488,992.074 480.855,992.074 480.465,992.465 C480.074,992.854 480.074,993.488 480.465,993.879 L484.586,998 L474,998 C473.447,998 473,998.447 473,999 C473,999.552 473.447,1000 474,1000 L484.586,1000 L480.465,1004.12 C480.074,1004.51 480.074,1005.14 480.465,1005.54 C480.855,1005.93 481.488,1005.93 481.879,1005.54 L487.535,999.879 C487.775,999.639 487.85,999.311 487.795,999 C487.85,998.689 487.775,998.361 487.535,998.121 L487.535,998.121 Z" id="arrow-right-square" sketch:type="MSShapeGroup">
+                
+                        </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-description">
+        <h3 class="slide-description__title">Описание проекта</h3>
+        
+        <div class="slide-description__item">
+            <p>В моем проекте по изучению JavaScript , были выполнины следующие задачи:</p>
+            <ul class="slide-description__item-list">
+                <li class="slide-description__item-pun">Основы JavaScript: Изучил синтаксис, типы данных, переменные и операторы.</li>
+                <li class="slide-description__item-pun">Функции: Научился создавать и использовать функции, в том числе стрелочные функции и функции высшего порядка.</li>
+                <li class="slide-description__item-pun">Управляющие структуры: Применял условные операторы (if, switch) и циклы (for, while) для управления потоком выполнения кода.</li>
+                <li class="slide-description__item-pun">Работа с массивами и объектами: Изучил методы работы с массивами (map, filter, reduce) и использовал объекты для хранения данных.</li>
+                <li class="slide-description__item-pun">DOM и события: Научился взаимодействовать с Document Object Model (DOM) для изменения HTML-страниц и обработки событий.</li>
+                <li class="slide-description__item-pun">Адаптивный дизайн: Использование CSS Flexbox и Grid для обеспечения корректного отображения на мобильных устройствах.</li>
+            </ul>
+        </div>
+        <div class="slide-description__item">
+            <p class="slide-description__item-content">В рамках моего проекта по изучению HTML, CSS и SCSS были выполнены ряд задач:</p>
+            <ul class="slide-description__item-list">
+                <li class="slide-description__item-pun">Удобный интерфейс: Интуитивно понятная навигация позволяет легко находить нужные товары.</li>
+                <li class="slide-description__item-pun">Отзывчивый дизайн: Магазин оптимизирован для работы на различных устройствах, включая мобильные телефоны и планшеты.</li>
+                <li class="slide-description__item-pun">Корзина для покупок: Пользователи могут добавлять товары в корзину и редактировать их перед оформлением заказа.</li>
+                <li class="slide-description__item-pun">Адаптивный дизайн: Использование CSS Flexbox и Grid для обеспечения корректного отображения на мобильных устройствах.</li>
+            </ul>
+
+        </div>
+        <div class="slide-description__item">
+            <p class="slide-description__item-content">Этот проект представляет собой веб-сайт, посвященный обучению игре на музыкальных инструментах. Одностраничный веб-сайт включает в себя несколько ключевых элементов:
+            </p>
+            <ul class="slide-description__item-list">
+                <li class="slide-description__item-pun">Основная страница: Привлекательный интерфейс с яркими изображениями инструментов, вдохновляющими цитатами и кратким описанием курсов. Логотип и навигация легко доступны.</li>
+                <li class="slide-description__item-pun">Курсы: Секция с каталогом курсов по различным инструментам: гитара, пиано, ударные, флейта и другие. Каждый курс включает описание, уровень сложности, продолжительность и цену.</li>
+                <li class="slide-description__item-pun">Расписание занятий: Интерактивный календарь с расписанием онлайн-занятий, где пользователи могут зарегистрироваться или записаться на выбранный курс.</li>
+                <li class="slide-description__item-pun">Интерактивные элементы**: Настроены анимации для эффектов при наведении на кнопки и изображения, создавая более увлекательный пользовательский опыт. Также можно реализовать тесты на знание музыки.</li>
+                <li class="slide-description__item-pun">Адаптивный дизайн выполнен не до конца, но это и не было основнрой задачей данного тренировочного проекта, обязательно вернусь к этому позже.</li>
+
+            </ul>
+        </div>
+
+</div>
+    </div>
+</sl>
+
+        </div>
+    </section>
+    
     <nav class="fixed-nav">
         <ul class="fixed-nav__list">
             <li class="fixed-nav__item"><a href="#header" class="fixed-nav__item-link"><img src="./img/Default.svg" alt="arrow up" class="fixed-nav__link-img"></a></li>
@@ -68,6 +244,6 @@
     </nav>
 
     
-    
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>
