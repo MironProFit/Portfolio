@@ -3,6 +3,9 @@
 @import 'variables';
 @import 'main';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "aireexterior";
