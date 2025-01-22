@@ -33,14 +33,23 @@ document.querySelectorAll('.about-modal__btn.close').forEach(button => {
     });
 });
 
-// Закрытие модального окна при клике вне него
-// window.onclick = function(event) {
-//     // Получаем все активные модальные окна
-//     const modals = document.querySelectorAll('.about-modal.active');
-//     modals.forEach(modal => {
-//         // Проверяем, был ли клик вне модального окна
-//         if (!modal.contains(event.target)) {
-//             modal.classList.remove('active'); // Закрываем модальное окно
-//         }
-//     });
-// }
+// Слайдер
+
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+
+document.getElementById('next').addEventListener('click', () => {
+    slides[currentIndex].classList.remove('img-active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('img-active');
+console.log(currentIndex);
+
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    slides[currentIndex].classList.remove('img-active');
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    slides[currentIndex].classList.add('img-active');
+console.log(currentIndex);
+
+});

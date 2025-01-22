@@ -425,16 +425,18 @@
 .slider-box {
   position: relative;
   grid-column: span 6;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px;
   margin: 200px auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 50px;
   box-sizing: border-box;
   position: relative;
   border: 1px solid #7CFC00;
   border-radius: 15px;
-  width: auto;
+  max-width: 1380px;
   height: 543px;
   background-image: radial-gradient(circle, rgba(124, 252, 0, 0.4), rgba(82, 125, 139, 0.4));
   box-shadow: -20px 7px 29px 20px rgba(0, 0, 0, 0.4), 20px -8px 29px 20px rgba(0, 0, 0, 0.4);
@@ -452,6 +454,65 @@
 }
 .slider-box:hover::before {
   box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.6), 20px -20px 85px 0px rgba(124, 252, 0, 0.6);
+}
+
+.slides {
+  gap: 50px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-active {
+  display: flex;
+}
+
+.slide:not(.img-active) {
+  display: none;
+}
+
+.slides-img {
+  max-width: 300px;
+  height: 500px;
+}
+
+.btn__slider {
+  border: none;
+  background: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s;
+}
+.btn__slider:hover .btn__slider-line {
+  background: #7CFC00;
+  box-shadow: -20px 7px 29px 20px rgba(0, 0, 0, 0.4), 20px -8px 29px 20px rgba(0, 0, 0, 0.4);
+}
+.btn__slider-line {
+  position: absolute;
+  border-radius: 20px;
+  top: 30px;
+  background-color: #1e1e1e;
+  width: 20px;
+  height: 100px;
+}
+.btn__slider-line:nth-child(1) {
+  top: 29px;
+  transform: rotate(45deg);
+}
+.btn__slider-line:nth-child(2) {
+  top: -29px;
+  transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.right {
+  transform: rotateX(-180deg);
 }
 
 body {
