@@ -12,6 +12,7 @@ $js: #E7A020;
 $react: #28A9E0;
 
 $tr:  0.3s;
+$trbg: 1s;
 
 .overlay {
     z-index: 2;
@@ -20,12 +21,29 @@ $tr:  0.3s;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
-    display: none;
-    transition: $tr;
+    visibility: hidden;
+    opacity: 0;
+    transition: $trbg;
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity $trbg ease;
+            }
+
+}
+.img{
+    &--one{
+        height: clamp(80px, 4vw, 200px);
+        width: clamp(80px, 4vw, 200px);
+    }
+    &--four {
+        height: clamp(50px, 4vw, 60px);
+        width: clamp(50px, 4vw, 60px);
+
+    }
 }
 
-.show {
-    display: block;
-}
+

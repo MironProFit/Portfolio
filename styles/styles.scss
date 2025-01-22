@@ -6,8 +6,7 @@
 
 body {
     font-family: "aireexterior";
-    font-size: 24px;
-    font-size: clamp(24px, 5vw, 16px);
+    // font-size: clamp(16px, 2.4vw, 24px);
     color: $white;
     box-sizing: border-box;
     background: $accent-dark;
