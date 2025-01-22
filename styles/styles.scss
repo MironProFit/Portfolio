@@ -42,8 +42,8 @@ body {
 }
 
 .center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+    padding-left: clamp(20px, 10vw, 920px);
+    padding-right: clamp(20px, 10vw, 920px);
 }
 
 @import 'tablet';

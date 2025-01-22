@@ -5,8 +5,8 @@ function toggleMenu() {
     const menu = document.getElementById('menu');
     const burger = document.querySelector('.header__burger');
 
-    menu.classList.toggle('active');
     burger.classList.toggle('active');
+    menu.classList.toggle('active');
 }
 
 // Модальное окно
@@ -24,7 +24,7 @@ document.querySelectorAll('.about-card__btn').forEach(button => {
         modal.classList.add('active');
         overlay.classList.add('show');
             setTimeout(() => {
-                modal.style.visibliti = 'visible'}, 30);
+                modal.style.opacity = '1'}, 30);
             }
         console.log(modalId);
         console.log(modal);
@@ -37,7 +37,9 @@ document.querySelectorAll('.about-modal__btn.close').forEach(button => {
 
         overlay.classList.remove('show'); 
         modal.classList.remove('active');
-    });
+        
+        }
+    );
 });
 
 // Слайдер

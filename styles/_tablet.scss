@@ -1,23 +1,60 @@
-@media (max-width: 1820px) {
-    .center {
-        padding-left: clamp(20px, 10vw, 920px);
-        padding-right: clamp(20px, 10vw, 920px);
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .about-box {
+        grid-template-columns: none;
+    }
+    .slide {
+        grid-column: span 12;
     }
 }
 
-@media (min-width: 1440) and (max-width: 1820px) {
+@media (max-width: 1023px) {
+    
+}
 
+@media (min-width: 851px) and (max-width: 1440px) {
+    .slider-box {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .slide {
+        grid-row: span 1;
+        // grid-column: span 12;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: revert;
+        justify-items: end;
+    }
+}
+
+
+@media (min-width: 1440) and (max-width: 1820px) {
     
     .about-box {
         display: flex;
         flex-direction: column;
-    }
+        grid-template-columns: repeat(3, 1fr);
+    }    
 
     .slider-wrapper {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(8, 1fr);
-    }
+    }    
 
     .slider-box {
         display: grid;
@@ -25,7 +62,7 @@
         // grid-template-rows: repeat(8, 1fr);
         grid-column: span 12;
 
-    }
+    }    
 
     .slides {
         display: grid;
@@ -36,40 +73,16 @@
 
         &-img {
             height: auto;
-        }
-    }
+        }    
+    }    
     .slide {
         grid-column: span 4;
         // &-description {
-
+    
         // }
-    }
-    .about-card {
-        grid-column: span 4;
-    }
-}
+    }    
+    // .about-card {
+    //     grid-column: span 4;    
+    // }
+}    
 
-@media (max-width: 1440px) {
-    .slide {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        gap: revert;
-        justify-items: end;
-    }
-}
-
-.about-box {
-    grid-template-columns: repeat(3, 1fr);
-
-}
-
-
-@media (max-width: 1440px) {
-    .about-card {
-        grid-column: span 11;
-    }
-}
