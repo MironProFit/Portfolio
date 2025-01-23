@@ -35,12 +35,16 @@
   width: clamp(50px, 4vw, 60px);
 }
 
+.window {
+  border: 1px solid red;
+}
+
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(to top, rgba(30, 30, 30, 0), rgba(30, 30, 30, 0.5), rgb(30, 30, 30));
 }
@@ -335,6 +339,7 @@
 }
 
 .about-card__title {
+  text-align: center;
   padding: 20px 10px 50px 10px;
 }
 
@@ -396,11 +401,11 @@
   visibility: visible;
   width: inherit;
   top: 50%;
-  width: 50vw;
+  width: 75vw;
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: radial-gradient(circle, rgba(124, 252, 0, 0.2), rgba(82, 125, 139, 0.2));
+  background: rgba(0, 0, 0, 0.2);
   color: #fff;
   z-index: 1001;
 }
@@ -487,15 +492,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   grid-column: span 4;
   box-sizing: border-box;
   padding: clamp(5px, 4vw, 20px);
   border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   border: 3px solid rgba(0, 0, 0, 0.4);
   box-shadow: 0 0px 57px 20px rgba(0, 0, 0, 0.4);
   gap: 25px;
@@ -503,6 +505,19 @@
 .slide svg {
   width: clamp(35px, 2vw, 50px);
   height: clamp(35px, 2vw, 50px);
+}
+.slide-box {
+  display: flex;
+  gap: clamp(50px, 2vw, 300px);
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.slide-title {
+  max-width: clamp(200px, 2vw, 500px);
+  text-align: center;
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 @media (hover: hover) {
@@ -631,6 +646,7 @@
 
 .contact-info {
   display: flex;
+  gap: 5px;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
@@ -641,7 +657,7 @@
   transition: 0.3s;
 }
 .contact-info__link:hover {
-  font-size: large;
+  font-size: clamp(20px, 2vw, 30px);
   font-weight: bold;
   color: #1E1E1E;
   text-shadow: 0px 0px 17px #7CFC00;
@@ -675,7 +691,7 @@
   padding-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background: linear-gradient(to bottom, rgba(30, 30, 30, 0), rgba(30, 30, 30, 0.5), rgb(30, 30, 30));
 }
@@ -689,6 +705,7 @@ html {
 
 body {
   font-family: "aireexterior";
+  font-size: clamp(16px, 2.4vw, 24px);
   color: #fff;
   box-sizing: border-box;
   background: #1E1E1E;
@@ -741,6 +758,14 @@ a p {
   .slide {
     grid-column: span 12;
   }
+  .slide-box {
+    flex-direction: row;
+  }
+}
+@media (min-width: 900px) and (max-width: 1440px) {
+  .slide {
+    flex-direction: column;
+  }
 }
 @media (min-width: 851px) and (max-width: 1440px) {
   .slider-box {
@@ -750,12 +775,10 @@ a p {
   .slide {
     grid-row: span 1;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    gap: revert;
     justify-items: end;
   }
 }

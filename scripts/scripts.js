@@ -51,7 +51,7 @@ function changeSlide(direction) {
     currentIndex = (currentIndex + direction + slides.length) % slides.length; 
     updateSlidePosition();
     console.log(currentIndex);
-    slide.classList.add('active');
+    // slide.classList.add('active');
 
 
 
@@ -110,6 +110,11 @@ function openFullScreen(image) {
         document.body.removeChild(fullScreenImageContainer);
         overlay.classList.remove('show');
     };
+
+    overlay.onclick = function () {
+        document.body.removeChild(fullScreenImageContainer);
+        overlay.classList.remove('show');
+    }
 
     document.body.appendChild(fullScreenImageContainer);
 }
