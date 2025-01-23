@@ -467,7 +467,7 @@
 }
 
 .slider-box {
-  padding: clamp(20px, 4vw, 50px);
+  padding: clamp(10px, 4vw, 50px);
   padding-top: clamp(20px, 4vw, 50px);
   padding-bottom: 0;
 }
@@ -500,7 +500,7 @@
   border-radius: 15px;
   border: 3px solid rgba(0, 0, 0, 0.4);
   box-shadow: 0 0px 57px 20px rgba(0, 0, 0, 0.4);
-  gap: 25px;
+  gap: clamp(2px, 2vw, 50px);
 }
 .slide svg {
   width: clamp(35px, 2vw, 50px);
