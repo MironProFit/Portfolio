@@ -94,13 +94,13 @@ function openFullScreen(image) {
     fullScreenImageContainer.style.left = '50%';
     fullScreenImageContainer.style.transform = 'translate(-50%, -50%)';
     fullScreenImageContainer.style.zIndex = '9999';
-    fullScreenImageContainer.style.height = '80vh'; // Высота контейнера с отступами сверху и снизу
+    fullScreenImageContainer.style.height = '80vh';
     fullScreenImageContainer.style.overflow = 'hidden';
 
     const fullScreenImage = document.createElement('img');
     fullScreenImage.src = image.src;
-    fullScreenImage.style.height = '100%'; // Заполнение контейнера по высоте
-    fullScreenImage.style.width = 'auto'; // Автоматическая ширина для центровки
+    fullScreenImage.style.height = '100%';
+    fullScreenImage.style.width = 'auto';
     fullScreenImage.style.objectFit = 'contain';
 
     fullScreenImageContainer.appendChild(fullScreenImage);
@@ -117,4 +117,100 @@ function openFullScreen(image) {
     }
 
     document.body.appendChild(fullScreenImageContainer);
+}
+
+// Game
+
+function userChoice(userSelection) {
+    const computerSelection = getComputerChoice();
+    displayComputerChoiceAnimated();
+    
+    setTimeout(() => {
+        displayComputerChoice(computerSelection);
+        const result = getResult(userSelection, computerSelection);
+        displayResult(result);
+    }, 3000); 
+
+    const buttons = document.querySelectorAll('.game__btn');
+    buttons.forEach(button => {
+        button.style.opacity = '0.5';
+        button.style.border = '3px solid #808080';
+    });
+    const selectedButton = document.getElementById(userSelection);
+    selectedButton.style.opacity = '1';
+    selectedButton.style.border = '3px solid #7CFC00'
+
+}
+
+function getComputerChoice() {
+    const choices = ['rock', 'paper', 'scissors'];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+
+let isAnimationActive = false;
+
+function displayComputerChoiceAnimated() {
+    const computerChoices = ['rock', 'paper', 'scissors'];
+    let index = 0;
+    const computerChoiceImg = document.getElementById('computer-choice');
+
+    isAnimationActive = true;
+    
+    const interval = setInterval(() => {
+        computerChoiceImg.src = `../img/${computerChoices[index]}.png`;
+        index = (index + 1) % computerChoices.length; 
+    }, 500);
+
+    setTimeout(() => {
+        clearInterval(interval);
+        isAnimationActive = false;
+     }, 1500);
+
+    
+}
+
+
+
+function displayComputerChoice(computerSelection) {
+    const computerChoiceImg = document.getElementById('computer-choice');
+    computerChoiceImg.src = `../img/${computerSelection}.png`;
+}
+
+function getResult(userSelection, computerSelection) {
+    const colorResult = document.getElementById('result');
+    if (userSelection === computerSelection) {
+        colorResult.style.color = 'blue';
+        return "Ничья!";
+    } else if (
+        (userSelection === 'rock' && computerSelection === 'scissors') ||
+        (userSelection === 'scissors' && computerSelection === 'paper') ||
+        (userSelection === 'paper' && computerSelection === 'rock')
+    ) {
+        colorResult.style.color = '#00f200';
+        return "Вы выиграли!";
+    } else {
+        colorResult.style.color = 'red';
+        return "Компьютер выиграл!";
+    }
+}
+
+function displayResult(result) {
+    if (isAnimationActive) return;
+
+    const buttons = document.querySelectorAll('.game__btn');
+    const resultDisplay = document.getElementById('result');
+    const computerChoiceImg = document.getElementById('computer-choice');
+
+    resultDisplay.textContent = result;
+
+    
+    setTimeout(() => {
+        buttons.forEach(button => {
+                    button.style.opacity = '1';
+                    button.style.border = '3px solid #808080';
+    });
+                computerChoiceImg.src = `../img/smile.png`}, 3000);
+                
+
 }

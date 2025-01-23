@@ -699,6 +699,168 @@
   justify-content: space-around;
 }
 
+.game-wrapper {
+  padding: clamp(20px, 4vw, 50px);
+  display: grid;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  gap: 20px;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #7CFC00;
+  border-radius: 15px;
+  background-image: radial-gradient(circle, rgba(124, 252, 0, 0.4), rgba(82, 125, 139, 0.4));
+  box-shadow: -20px 7px 29px 20px rgba(0, 0, 0, 0.4), 20px -8px 29px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+.game-wrapper::before {
+  z-index: -5;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.4), 20px -20px 85px 0px rgba(124, 252, 0, 0.4);
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  .game-wrapper:hover::before {
+    box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.6), 20px -20px 85px 0px rgba(124, 252, 0, 0.6);
+  }
+}
+
+.game-title {
+  padding-bottom: clamp(15px, 2vw, 50px);
+  text-align: center;
+  margin: auto;
+}
+
+.game-user__title {
+  text-align: center;
+}
+
+.game-user__button {
+  background: rgba(19, 22, 17, 0.58);
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: clamp(20px, 2vw, 50px);
+  margin: clamp(20px, 2vw, 50px);
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.6), 20px -20px 85px 0px rgba(124, 252, 0, 0.6);
+}
+
+.game__btn {
+  background-color: #2C2C2C;
+  border: 3px solid grey;
+  border-radius: 25%;
+  width: 55px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 0.3s;
+  box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.6), 20px -20px 85px 0px rgba(124, 252, 0, 0.6);
+}
+.game__btn:hover {
+  border: 3px solid #7CFC00;
+}
+
+.game-conteiner {
+  align-items: center;
+  padding: clamp(5px, 2vw, 50px);
+  display: grid;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  gap: 20px;
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #7CFC00;
+  border-radius: 15px;
+  box-shadow: -20px 7px 29px 20px rgba(0, 0, 0, 0.4), 20px -8px 29px 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+.game-conteiner::before {
+  z-index: -5;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.4), 20px -20px 85px 0px rgba(124, 252, 0, 0.4);
+  transition: 0.3s;
+}
+
+.rock-btn {
+  background-image: url(../img/rock.png);
+}
+
+.paper-btn {
+  background-image: url(../img/paper.png);
+}
+
+.scissors-btn {
+  background-image: url(../img/scissors.png);
+}
+
+.game-comp {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-user {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-comp-btn {
+  width: 35px;
+  height: 35px;
+}
+
+.game-comp__select-btn {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.6), 20px -20px 85px 0px rgba(124, 252, 0, 0.6);
+}
+
+.game-comp__select-btn {
+  background: rgba(19, 22, 17, 0.58);
+  width: 55px;
+  height: 55px;
+}
+
+.game-rules__title {
+  text-align: center;
+}
+
+#result {
+  color: #868686;
+  background: rgba(19, 22, 17, 0.58);
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px;
+  gap: 20px;
+  box-shadow: -20px 20px 85px 0px rgba(124, 252, 0, 0.6), 20px -20px 85px 0px rgba(124, 252, 0, 0.6);
+}
+
+.game-rules__subtitle {
+  text-align: center;
+}
+
 html {
   scroll-behavior: smooth;
 }
