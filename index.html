@@ -48,6 +48,7 @@
                     <li class="nav__item"><a href="#about" class="nav__item-link">Обо мне</a></li>
                     <li class="nav__item"><a href="#skill" class="nav__item-link">Навыки</a></li>
                     <li class="nav__item"><a href="#projects" class="nav__item-link">Мои проекты</a></li>
+                    <li class="nav__item"><a href="#game" class="nav__item-link">Сыграем?</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__item-link">Связь со мной</a></li>
                 </ul>
         </div>
@@ -133,7 +134,10 @@
 
                 <div class="slides">
                     <div class="slide">
-                        <img class="slides-img" src="./img/Game.jpeg" alt="" onclick="openFullScreen(this)">
+                        <div class="slide-img__box">
+
+                            <img class="slides-img" src="./img/Game.jpeg" alt="" onclick="openFullScreen(this)">
+                        </div>
                         <div class="slide-box">
                             <div class="slide-title">Сайт с JS играми</div>
                             <a href="https://github.com/MironProFit/2-course" class="slides-github">
@@ -152,7 +156,9 @@
                         </div>
                     </div>
                     <div class="slide">
+                        <div class="slide-img__box">
                         <img class="slides-img" src="./img/online_shop.jpeg" alt="" onclick="openFullScreen(this)">
+                        </div>
                         <div class="slide-box">
                             <div class="slide-title">Онлайн магазин</div>
                         <a href="https://github.com/MironProFit/Online-story" class="slides-github"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -170,7 +176,9 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <img class="slides-img" src="./img/Music.jpeg" alt="" onclick="openFullScreen(this)">
+                        <div class="slide-img__box">
+                            <img class="slides-img" src="./img/Music.jpeg" alt="" onclick="openFullScreen(this)">
+                        </div>
                         <div class="slide-box">
                             <div class="slide-title">Музыкальные курсы</div>
                             <a href="https://github.com/MironProFit/Music" class="slides-github"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -275,7 +283,7 @@
         </div>
     </section>
   
-    <section class="game center">
+    <section class="game center" id="game">
         <h2 class="title-h2">Давай сыграем?</h2>
         <div class="game-wrapper">
             <h3 class="game-title">Знакомы с популярной игрой "Камень, Ножницы, Бумага"?</h3>
@@ -310,8 +318,9 @@
         <div class="contact-wrapper">
             <h3 class="contact-title">Со мной вы можете связаться следующим способом:</h3>
             <div class="contact-info">
-                <p><strong>Телефон:</strong> <a class="contact-info__link" href="tel:+79224660044">+7 (922) 4-66-00-44</a></p>
-                <p><strong>Email:</strong> <a class="contact-info__link" href="mailto:mpf_3d@vk.com">mpf_3d@vk.com</a></p>
+                <div class="contact-info__wrapper "><strong>Телефон:</strong><a class="contact-info__link tel" href="tel:+79224660044">+7 (922) 4-66-00-44</a>
+                </div>
+                <p class="contact-info__wrapper "><strong>Email:</strong> <a class="contact-info__link email" href="mailto:mpf_3d@vk.com">mpf_3d@vk.com</a></p>
             </div>
             <div class="social-icons">
                 <a href="https://github.com/MironProFit" target="_blank">
@@ -351,7 +360,7 @@
                 </svg>
             </a>
         </div>
-        <p class="footer-description">Дизайн и разработка: <u style="color: rgba(124, 252, 0, 0.8);">Каширин Мирон</u></p>
+        <p class="footer-description">Дизайн и разработка:<u style="color: rgba(124, 252, 0, 0.8);">Каширин Мирон</u></p>
         <p class="footer-rights">© 2025 год. Все права защищены.</p>
     </footer>
 

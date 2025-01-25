@@ -13,24 +13,14 @@
         grid-template-columns: none;
     }
     .slide {
-
+        // flex-direction: column;
         grid-column: span 12;
         &-box {
-            flex-direction: row;
+            flex-direction: column;
         }
     }
-    // .game-conteiner {
-    //     flex-direction: column;
-    // }
-    
+
 }
-
-// @media (max-width: 1350px) {
-//     .slider-box {
-//         flex-direction: row;
-
-//     }
-// }
 
 @media (min-width: 900px) and (max-width: 1440px) {
     .slide {
@@ -57,6 +47,11 @@
         justify-items: end;
     }
 }
+
+    .nav__list {
+        row-gap: 0px;
+
+    }
 
 
 @media (min-width: 1440) and (max-width: 1820px) {

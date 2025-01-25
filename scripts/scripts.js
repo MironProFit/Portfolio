@@ -1,12 +1,47 @@
-// Бургер меню
+
+let menuVisible = false;
 
 function toggleMenu() {
-    
+    const header = document.querySelector('.header');
     const menu = document.getElementById('menu');
+    const items = document.querySelectorAll('.nav__item');
     const burger = document.querySelector('.header__burger');
+    const screenWidth = window.innerWidth;
 
-    burger.classList.toggle('active');
-    menu.classList.toggle('active');
+    menuVisible = !menuVisible;
+    menu.classList.toggle('show', menuVisible);
+
+    if (menuVisible) {
+        setTimeout(() => {
+            burger.classList.add('active');
+        }, 0);
+        
+        // if (screenWidth <= 849) {
+        //     header.style.height = 'clamp(245px, 2vw, 500px)';
+        // }
+
+        menu.style.display = 'flex';
+        
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('show');
+            }, index * 100);
+        });
+    } else {
+        burger.classList.remove('active');
+        
+        [...items].reverse().forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.remove('show');
+            }, index * 100);
+        });
+
+        setTimeout(() => {
+            menu.style.display = 'none';
+            // menu.style.width = '1px';
+
+        }, items.length * 100);
+    }
 }
 
 // Модальное окно
@@ -170,8 +205,6 @@ function displayComputerChoiceAnimated() {
     
 }
 
-
-
 function displayComputerChoice(computerSelection) {
     const computerChoiceImg = document.getElementById('computer-choice');
     computerChoiceImg.src = `../img/${computerSelection}.png`;
@@ -179,6 +212,7 @@ function displayComputerChoice(computerSelection) {
 
 function getResult(userSelection, computerSelection) {
     const colorResult = document.getElementById('result');
+    
     if (userSelection === computerSelection) {
         colorResult.style.color = 'blue';
         return "Ничья!";
@@ -193,6 +227,7 @@ function getResult(userSelection, computerSelection) {
         colorResult.style.color = 'red';
         return "Компьютер выиграл!";
     }
+    
 }
 
 function displayResult(result) {
@@ -201,6 +236,7 @@ function displayResult(result) {
     const buttons = document.querySelectorAll('.game__btn');
     const resultDisplay = document.getElementById('result');
     const computerChoiceImg = document.getElementById('computer-choice');
+    const colorResult = document.getElementById('result');
 
     resultDisplay.textContent = result;
 
@@ -210,6 +246,8 @@ function displayResult(result) {
                     button.style.opacity = '1';
                     button.style.border = '3px solid #808080';
     });
+                resultDisplay.textContent = 'Результат';
+                colorResult.style.color = '#868686'
                 computerChoiceImg.src = `../img/smile.png`}, 3000);
                 
 
