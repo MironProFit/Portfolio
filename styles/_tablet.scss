@@ -19,10 +19,19 @@
             flex-direction: column;
         }
     }
+    .nav__list {
+        row-gap: 10px;
+        column-gap: 20px;
+    }
 
 }
 
 @media (min-width: 900px) and (max-width: 1440px) {
+    .about-modal {
+        &.active {
+            width: 70vw;
+        }
+    }
     .slide {
         flex-direction: column;
     }
@@ -48,10 +57,7 @@
     }
 }
 
-    .nav__list {
-        row-gap: 0px;
 
-    }
 
 
 @media (min-width: 1440) and (max-width: 1820px) {
