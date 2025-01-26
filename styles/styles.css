@@ -433,7 +433,6 @@
   opacity: 1;
   visibility: visible;
   top: 50%;
-  width: 90vw;
   height: auto;
   position: fixed;
   left: 50%;
@@ -1000,16 +999,19 @@ a p {
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
+  .about-modal.active {
+    width: 90vw;
+  }
 }
 @media (min-width: 900px) and (max-width: 1440px) {
-  .about-modal.active {
-    width: 70vw;
-  }
   .slide {
     flex-direction: column;
   }
 }
 @media (min-width: 851px) and (max-width: 1440px) {
+  .nav__list {
+    row-gap: 0;
+  }
   .slider-box {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -1024,7 +1026,10 @@ a p {
     justify-items: end;
   }
 }
-@media (min-width: 1440) and (max-width: 1820px) {
+@media (min-width: 1441) and (max-width: 1820px) {
+  .about-modal.active {
+    width: 20vw;
+  }
   .about-box {
     display: flex;
     flex-direction: column;
