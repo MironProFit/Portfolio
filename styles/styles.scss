@@ -3,35 +3,45 @@
 @import 'variables';
 @import 'main';
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: "aireexterior";
-    // font-size: clamp(16px, 2.4vw, 24px);
+    font-family: 'aireexterior';
+    font-size: clamp(16px, 2.4vw, 24px);
     color: $white;
     box-sizing: border-box;
     background: $accent-dark;
     margin: 0;
     padding: 0;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin: 0;
         padding: 0;
     }
     ul {
-        list-style-type: none;
-    }
-
-    }
-    a {
         margin: 0;
         padding: 0;
-        text-decoration: none;
-        &:visited {
-            color: inherit;
-        }
-        &:active {
-            color: inherit;
-        }
+        list-style-type: none;
+    }
+}
+a {
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+    }
+    &:active {
+        color: inherit;
+    }
     p {
         margin: 0;
         padding: 0;
@@ -39,9 +49,8 @@ body {
 }
 
 .center {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
+    padding-left: clamp(20px, 10vw, 920px);
+    padding-right: clamp(20px, 10vw, 920px);
 }
 
 @import 'tablet';
-

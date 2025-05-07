@@ -1,70 +1,105 @@
-@media (max-width: 1820px) {
-    .center {
-        padding-left: clamp(20px, 10vw, 920px);
-        padding-right: clamp(20px, 10vw, 920px);
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .about-box {
+        grid-template-columns: none;
+    }
+    .slide {
+        grid-column: span 12;
+        &-box {
+            flex-direction: column;
+        }
+    }
+    .nav__list {
+        row-gap: 10px;
+        column-gap: 20px;
+    }
+    .about-modal {
+
+        &.active {
+            width: 90vw;
+        }
+    }
+
+}
+
+@media (min-width: 900px) and (max-width: 1440px) {
+    
+    .slide {
+        flex-direction: column;
     }
 }
 
-@media (min-width: 1440) and (max-width: 1820px) {
+@media (min-width: 851px) and (max-width: 1440px) {
+    .nav__list {
+        row-gap: 0;
+    }
+    .slider-box {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 
-    
+    .slide {
+        grid-row: span 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: end;
+    }
+}
+
+
+
+
+@media (min-width: 1441) and (max-width: 1820px) {
+    .about-modal {
+
+        &.active {
+            width: 20vw;
+        }
+    }
+
     .about-box {
         display: flex;
         flex-direction: column;
-    }
+        grid-template-columns: repeat(3, 1fr);
+    }    
 
     .slider-wrapper {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(8, 1fr);
-    }
+    }    
 
     .slider-box {
         display: grid;
-        // grid-template-columns: repeat(12, 1fr);
-        // grid-template-rows: repeat(8, 1fr);
         grid-column: span 12;
 
-    }
+    }    
 
     .slides {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        // grid-template-rows: repeat(8, 1fr);
         grid-row: 1;
         grid-column: span 12;
 
         &-img {
             height: auto;
-        }
-    }
+        }    
+    }    
     .slide {
         grid-column: span 4;
-        // &-description {
+    }    
+    
+}    
 
-        // }
-    }
-    .about-card {
-        grid-column: span 4;
-    }
-}
-
-@media (max-width: 1440px) {
-    .slide {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: revert;
-        justify-items: end;
-    }
-}
-.slides-github{
-    padding-right: 20px;
-}
-
-.about-box {
-    grid-template-columns: repeat(3, 1fr);
-
-}
-.about-card {
-    grid-column: span 12;
-}
