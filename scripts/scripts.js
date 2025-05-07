@@ -95,7 +95,7 @@ function changeSlide(direction) {
 
 function updateSlidePosition() {
     const description = document.querySelectorAll('.slide-description__item');
-    const slidesContainer = document.querySelector('.slides');
+    // const slidesContainer = document.querySelector('.slides');
     const slides = document.querySelectorAll('.slide');
 
    
@@ -170,6 +170,7 @@ function userChoice(userSelection) {
     buttons.forEach(button => {
         button.style.opacity = '0.5';
         button.style.border = '3px solid #808080';
+        
     });
     const selectedButton = document.getElementById(userSelection);
     selectedButton.style.opacity = '1';
