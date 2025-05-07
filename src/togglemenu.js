@@ -1,5 +1,5 @@
-export function toggleMenu() {
-    let menuVisible = false
+export function toggleMenu(menu, items, burger, menuVisible) {
+    console.log('функция запущена');
 
     menuVisible = !menuVisible
     menu.classList.toggle('show', menuVisible)
@@ -28,4 +28,5 @@ export function toggleMenu() {
             menu.style.display = 'none'
         }, items.length * 100)
     }
+    return menuVisible
 }

@@ -1,4 +1,4 @@
-export const modalWindow = () => {
+export const modalWindow = (overlay) => {
     document.querySelectorAll('.about-card__btn').forEach((button) => {
     button.addEventListener('click', () => {
         const modalId = button.getAttribute('data-modal')
