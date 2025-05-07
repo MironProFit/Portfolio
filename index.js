@@ -1,9 +1,11 @@
-// import { renderslider } from './src/renderslider'
+import { toggleDesc } from './src/descslide.js'
+import { renderslider } from './src/renderslider.js'
 import { toggleMenu } from './src/togglemenu.js'
 import { modalWindow } from './src/modal.js'
 import { slider } from './src/slider.js'
-console.log('проект запущен')
+
 export let menuVisible = false
+
 
 // Burger меню
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //Модальное окно
 
-export const images = document.querySelectorAll('.slides-img');
-export const overlay = document.createElement('div');
-overlay.className = 'overlay';
-document.body.appendChild(overlay);
+export const images = document.querySelectorAll('.slides-img')
+export const overlay = document.createElement('div')
+overlay.className = 'overlay'
+document.body.appendChild(overlay)
 
 modalWindow(overlay)
 
 // слайдер
-
+renderslider()
+toggleDesc()
 slider()
-
