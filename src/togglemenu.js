@@ -1,5 +1,5 @@
 export function toggleMenu(menu, items, burger, menuVisible) {
-    console.log('функция запущена');
+    console.log('функция запущена')
 
     menuVisible = !menuVisible
     menu.classList.toggle('show', menuVisible)

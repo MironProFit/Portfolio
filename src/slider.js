@@ -1,6 +1,10 @@
 let currentIndex = 0
 export const slider = () => {
-    const slides = document.querySelectorAll('.slide')
+    const slides = document.querySelector('.slides')
+
+    const renderSlides = () => {
+        
+    }
 
     function changeSlide(direction) {
         currentIndex = (currentIndex + direction + slides.length) % slides.length
