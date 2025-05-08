@@ -100,12 +100,12 @@ function updateSlidePosition() {
             slide.style.transition = '0.5s'
             slide.style.opacity = '1'
             slide.style.cursor = 'pointer'
-            slide.style.border = '3px solid rgba(124, 252, 0, 0.6)'
+            // slide.style.border = '1px solid rgba(124, 252, 0, 0.6)'
             description[index].style.display = 'block'
         } else {
             slide.style.transition = '0.5s'
             slide.style.opacity = '0.2'
-            slide.style.border = '3px solid transparent'
+            slide.style.border = '1px solid transparent'
             description[index].style.display = 'none'
             slide.style.cursor = 'default'
         }

@@ -1,10 +1,11 @@
 let currentIndex = 0
 export const slider = () => {
-    const slides = document.querySelector('.slides')
+    const slides = document.querySelectorAll('.slide')
+    const slideImage = document.querySelectorAll('.slide-img__box')
+    const slideUrl = document.querySelectorAll('.slide-box')
 
-    const renderSlides = () => {
-        
-    }
+    const slideTitle = document.querySelectorAll('.slide-title')
+    console.log(slideUrl)
 
     function changeSlide(direction) {
         currentIndex = (currentIndex + direction + slides.length) % slides.length
@@ -26,15 +27,46 @@ export const slider = () => {
     function updateSlidePosition() {
         slides.forEach((slide, index) => {
             if (index === currentIndex) {
-                slide.style.transition = '0.5s'
-                slide.style.opacity = '1'
+                // slide.classList.add('expand') // Добавляем класс для расширения
+                // slide.classList.remove('collapsed') // Добавляем класс для расширения
+
+                slideImage[index].style.display = 'flex'
+                slideUrl[index].style.display = 'flex'
+                // Убираем класс для скрытия
+                // const windowHeight = window.innerHeight // Высота окна
+//                 const slideHeight = slide.offsetHeight // Высота слайда
+//                 const translateY = (slideHeight) / 2 // Расчет для центрирования
+// console.log(translateY);
+                // slide.style.transform = 'translateX(2px)'
+                setTimeout(() => {
+                    // Добавляем класс для плавного появления изображений и URL
+                    slideImage[index].classList.add('visible')
+                    slideUrl[index].classList.add('visible')
+                }, 500) // Задержка для совпадения с анимацией расширения
+                setTimeout(() => {
+                    // Добавляем класс для плавного появления изображений и URL
+                }, 300) // Задержка для совпадения с анимацией расширения
+
                 slide.style.cursor = 'pointer'
-                slide.style.border = '3px solid rgba(124, 252, 0, 0.6)'
+                slide.style.border = '1px solid rgba(124, 252, 0, 0.6)'
+                // slide.style.transform = `(translateY(slide.lenght))`
             } else {
-                slide.style.transition = '0.5s'
-                slide.style.opacity = '0.2'
-                slide.style.border = '3px solid transparent'
+                slide.classList.add('collapsed') // Добавляем класс для расширения
+
+                slide.style.transform = 'translateX(0)'
+
+                // slide[index].classList.remove('collapsed');
+                slide.classList.remove('expand') // Убираем класс для расширения
+                // slide.classList.add('collapsed'); // Добавляем класс для скрытия
+
+                // Убираем класс для скрытия изображений и URL
+                slideImage[index].classList.remove('visible')
+                slideUrl[index].classList.remove('visible')
+
+                slideImage[index].style.display = 'none' // Скрываем полностью (опционально)
+                slideUrl[index].style.display = 'none' // Скрываем полностью (опционально)
                 slide.style.cursor = 'default'
+                slide.style.border = '1px solid transparent'
             }
             slide.style.boxShadow = `-20px 7px 29px 20px rgba(0, 0, 0, 0.4)`
         })
@@ -67,7 +99,9 @@ export const slider = () => {
             overlay.classList.add('show')
 
             const closeFullScreenImage = () => {
-                overlay.removeChild(fullScreenImageContainer)
+                if (overlay.contains(fullScreenImageContainer)) {
+                    fullScreenImageContainer.remove() // Используем remove() для удаления элемента
+                }
                 if (overlay.childNodes.length === 0) {
                     overlay.classList.remove('show')
                 }

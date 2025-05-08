@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const items = Array.from(document.querySelectorAll('.nav__item'));
     const burger = document.querySelector('.header__burger');
+    menu.style.display ='none'
     
     burger.addEventListener('click', (e) => {
         console.log('бургер меню нажато');

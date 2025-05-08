@@ -25,8 +25,7 @@ export const toggleDesc = () => {
                     if (showDesc) {
                         setTimeout(() => elem.classList.add('show'), 50);
                     } else {
-                        setTimeout(() => elem.classList.remove('show'), (contentItems.length - i) * 200);
-                    }
+                        setTimeout(() => elem.classList.remove('show'), (contentItems.length - i) * 200);                   }
                 });
             }
         });
