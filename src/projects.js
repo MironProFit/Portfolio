@@ -61,4 +61,52 @@ export const myWorks = [
                         </ul>`,
         },
     },
+    {
+        title: 'Онлайн магазин',
+        websiteURL: 'https://mironprofit.github.io/Online-story/',
+        githubUrl: 'https://github.com/MironProFit/Online-story',
+        image: './img/online_shop.jpeg',
+        description: {
+            text: `
+            <p class="slide-description__item-content">В рамках моего проекта по изучению HTML, CSS и SCSS были выполнены ряд задач:</p>
+            <ul class="slide-description__item-list">
+                <li class="slide-description__item-pun">Удобный интерфейс: Интуитивно понятная навигация позволяет легко находить нужные товары.</li>
+                <li class="slide-description__item-pun">Отзывчивый дизайн: Магазин оптимизирован для работы на различных устройствах, включая мобильные телефоны и планшеты.</li>
+                <li class="slide-description__item-pun">Корзина для покупок: Пользователи могут добавлять товары в корзину и редактировать их перед оформлением заказа.</li>
+            </ul>
+        `,
+        },
+    },
+    {
+        title: 'Онлайн магазин',
+        websiteURL: 'https://mironprofit.github.io/Online-story/',
+        githubUrl: 'https://github.com/MironProFit/Online-story',
+        image: './img/online_shop.jpeg',
+        description: {
+            text: `
+            <p class="slide-description__item-content">В рамках моего проекта по изучению HTML, CSS и SCSS были выполнены ряд задач:</p>
+            <ul class="slide-description__item-list">
+                <li class="slide-description__item-pun">Удобный интерфейс: Интуитивно понятная навигация позволяет легко находить нужные товары.</li>
+                <li class="slide-description__item-pun">Отзывчивый дизайн: Магазин оптимизирован для работы на различных устройствах, включая мобильные телефоны и планшеты.</li>
+                <li class="slide-description__item-pun">Корзина для покупок: Пользователи могут добавлять товары в корзину и редактировать их перед оформлением заказа.</li>
+            </ul>
+        `,
+        },
+    },
+    {
+        title: 'Онлайн магазин',
+        websiteURL: 'https://mironprofit.github.io/Online-story/',
+        githubUrl: 'https://github.com/MironProFit/Online-story',
+        image: './img/online_shop.jpeg',
+        description: {
+            text: `
+            <p class="slide-description__item-content">В рамках моего проекта по изучению HTML, CSS и SCSS были выполнены ряд задач:</p>
+            <ul class="slide-description__item-list">
+                <li class="slide-description__item-pun">Удобный интерфейс: Интуитивно понятная навигация позволяет легко находить нужные товары.</li>
+                <li class="slide-description__item-pun">Отзывчивый дизайн: Магазин оптимизирован для работы на различных устройствах, включая мобильные телефоны и планшеты.</li>
+                <li class="slide-description__item-pun">Корзина для покупок: Пользователи могут добавлять товары в корзину и редактировать их перед оформлением заказа.</li>
+            </ul>
+        `,
+        },
+    },
 ]

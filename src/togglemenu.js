@@ -1,36 +1,45 @@
 export function toggleMenu(menu, items, burger, menuVisible) {
-    console.log('функция запущена');
+    console.log('функция запущена')
 
-    menuVisible = !menuVisible; // Переключаем видимость меню
-    menu.classList.toggle('show', menuVisible); // Добавляем/удаляем класс 'show'
+    menuVisible = !menuVisible // Переключаем видимость меню
+    menu.classList.toggle('show', menuVisible) // Добавляем/удаляем класс 'show'
 
     if (menuVisible) {
-        // Если меню открыто
         setTimeout(() => {
-            burger.classList.add('active'); // Добавляем класс 'active' к бургеру
-        }, 50);
+            burger.classList.add('active') // Добавляем класс 'active' к бургеру
+            menu.style.maxHeight = '400px'
+        }, 50)
 
-        menu.style.display = 'flex'; // Делаем меню видимым
+        menu.style.display = 'flex' // Делаем меню видимым
 
         items.forEach((item, index) => {
             setTimeout(() => {
-                item.classList.add('show'); // Добавляем класс 'show' для каждого элемента
-            }, index * 100); // Задержка для каждого элемента
-        });
+                item.classList.add('show') // Добавляем класс 'show' для каждого элемента
+            }, index * 100) // Задержка для каждого элемента
+        })
     } else {
-        // Если меню закрыто
-        burger.classList.remove('active'); // Убираем класс 'active' у бургера
 
-        [...items].reverse().forEach((item, i) => {
+        burger.classList.remove('active') // Убираем класс 'active' у бургера
+        ;[...items].reverse().forEach((item, i) => {
             setTimeout(() => {
-                item.classList.remove('show'); // Убираем класс 'show' для каждого элемента
-            }, (items.length - i) * 100); // Задержка для каждого элемента в обратном порядке
-        });
+                item.classList.remove('show') // Убираем класс 'show' для каждого элемента
+            }, (items.length - i) * 100) // Задержка для каждого элемента в обратном порядке
+        })
 
         // Убираем меню после завершения анимации скрытия элементов
+        setTimeout(function() {
+            menu.style.maxHeight = '0'
+            
+            
+        }, 300);
         setTimeout(() => {
-            menu.style.display = 'none'; // Скрываем меню
-        }, items.length * 100 + 50); // Учитываем задержку для анимации
+            
+        }, items.length * 100 + 50) // Учитываем задержку для анимации
+        setTimeout(function() {
+                        // menu.style.display = 'none' // Скрываем меню
+
+        }, 700);
+        console.log(items.length * 100 + 50);
     }
-    return menuVisible; // Возвращаем текущее состояние видимости меню
+    return menuVisible // Возвращаем текущее состояние видимости меню
 }

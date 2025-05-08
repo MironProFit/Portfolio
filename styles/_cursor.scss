@@ -1,0 +1,73 @@
+body {
+    cursor: url('../cursor/Arrow.ani'), auto; /* Курсор по умолчанию */
+}
+
+/* Курсор "помощь" */
+.help {
+    cursor: url('../cursor/Help.ani'), help; /* Курсор помощи */
+}
+
+/* Курсор "начало приложения" */
+.app-starting {
+    cursor: url('../cursor/AppStarting.ani'), auto; /* Курсор для начала приложения */
+}
+
+/* Курсор "ожидание" */
+.wait {
+    cursor: url('../cursor/Wait.ani'), wait; /* Курсор ожидания */
+}
+
+/* Курсор "крест" */
+.cross {
+    cursor: url('../cursor/Cross.ani'), crosshair; /* Курсор крест */
+}
+
+/* Курсор "I-Beam" */
+.ibeam {
+    cursor: url('../cursor/IBeam.ani'), text; /* Курсор I-Beam для текстовых полей */
+}
+
+/* Курсор "написание" */
+.handwriting {
+    cursor: url('../cursor/Handwriting.ani'), text; /* Курсор для написания */
+}
+
+/* Курсор "нельзя" */
+.no-drop {
+    cursor: url('../cursor/NO.ani'), not-allowed; /* Курсор "нельзя" */
+}
+
+/* Курсор "вверх-вниз" */
+.size-ns {
+    cursor: url('../cursor/SizeNS.ani'), ns-resize; /* Курсор "вверх-вниз" */
+}
+
+/* Курсор "влево-вправо" */
+.size-we {
+    cursor: url('../cursor/SizeWE.ani'), ew-resize; /* Курсор "влево-вправо" */
+}
+
+/* Курсор "по диагонали (северо-запад - юго-восток)" */
+.size-nwse {
+    cursor: url('../cursor/SizeNWSE.ani'), nwse-resize; /* Курсор "по диагонали" */
+}
+
+/* Курсор "по диагонали (северо-восток - юго-запад)" */
+.size-nesw {
+    cursor: url('../cursor/SizeNESW.ani'), nesw-resize; /* Курсор "по диагонали" */
+}
+
+/* Курсор "все размеры" */
+.size-all {
+    cursor: url('../cursor/SizeAll.ani'), all-scroll; /* Курсор "все размеры" */
+}
+
+/* Курсор "стрелка вверх" */
+.up-arrow {
+    cursor: url('../cursor/UpArrow.ani'), auto; /* Курсор "стрелка вверх" */
+}
+
+/* Курсор "рука" */
+.hand {
+    cursor: url('../cursor/Hand.ani'), pointer; /* Курсор "рука" */
+}

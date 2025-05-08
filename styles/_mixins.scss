@@ -40,3 +40,31 @@
     }
 }
 
+@mixin style-btn {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    font-size: 1em;
+    font-family: 'pulsar';
+    // width: clamp(160px, 4vw, 251px);
+    // height: clamp(50px, 4vw, 50px);
+    border: none;
+    border-radius: 15px;
+    box-shadow: -2px 3px 16px 2px $accent-dark;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.99) 5.344%, rgb(102 101 101 / 99%) 59.542%, rgb(179 178 178 / 99%) 98.779%, rgba(0, 0, 0, 0.99) 100%);
+    background-size: 200% 200%;
+    background-position: 50% 50%;
+    transition: background-position $tr, box-shadow $tr, clip-path $tr;
+
+    @media (hover: hover) {
+        &:hover {
+            background-position: 0 75%;
+            box-shadow: -5px 6px 16px 2px $accent-dark;
+        }
+    }
+}
+

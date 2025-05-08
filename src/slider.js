@@ -3,6 +3,7 @@ export const slider = () => {
     const slides = document.querySelectorAll('.slide')
     const slideImage = document.querySelectorAll('.slide-img__box')
     const slideUrl = document.querySelectorAll('.slide-box')
+    const slideDots = document.querySelector('.slider-dots')
 
     const slideTitle = document.querySelectorAll('.slide-title')
     console.log(slideUrl)
@@ -27,50 +28,93 @@ export const slider = () => {
     function updateSlidePosition() {
         slides.forEach((slide, index) => {
             if (index === currentIndex) {
-                // slide.classList.add('expand') // Добавляем класс для расширения
-                // slide.classList.remove('collapsed') // Добавляем класс для расширения
+                slide.classList.add('expand')
+                slide.classList.remove('collapsed')
 
                 slideImage[index].style.display = 'flex'
                 slideUrl[index].style.display = 'flex'
-                // Убираем класс для скрытия
-                // const windowHeight = window.innerHeight // Высота окна
-//                 const slideHeight = slide.offsetHeight // Высота слайда
-//                 const translateY = (slideHeight) / 2 // Расчет для центрирования
-// console.log(translateY);
-                // slide.style.transform = 'translateX(2px)'
-                setTimeout(() => {
-                    // Добавляем класс для плавного появления изображений и URL
-                    slideImage[index].classList.add('visible')
-                    slideUrl[index].classList.add('visible')
-                }, 500) // Задержка для совпадения с анимацией расширения
-                setTimeout(() => {
-                    // Добавляем класс для плавного появления изображений и URL
-                }, 300) // Задержка для совпадения с анимацией расширения
 
-                slide.style.cursor = 'pointer'
+                setTimeout(() => {
+                    // slideImage[index].classList.add('visible')
+                    // slideUrl[index].classList.add('visible')
+                }, 500)
+                setTimeout(() => {}, 300)
+
+                // slide.style.cursor = 'pointer'
                 slide.style.border = '1px solid rgba(124, 252, 0, 0.6)'
-                // slide.style.transform = `(translateY(slide.lenght))`
             } else {
-                slide.classList.add('collapsed') // Добавляем класс для расширения
+                slide.classList.add('collapsed')
 
-                slide.style.transform = 'translateX(0)'
+                // slide.style.transform = 'translateX(0)'
 
-                // slide[index].classList.remove('collapsed');
-                slide.classList.remove('expand') // Убираем класс для расширения
-                // slide.classList.add('collapsed'); // Добавляем класс для скрытия
+                slide.classList.remove('expand')
 
-                // Убираем класс для скрытия изображений и URL
                 slideImage[index].classList.remove('visible')
                 slideUrl[index].classList.remove('visible')
 
-                slideImage[index].style.display = 'none' // Скрываем полностью (опционально)
-                slideUrl[index].style.display = 'none' // Скрываем полностью (опционально)
-                slide.style.cursor = 'default'
+                slideImage[index].style.display = 'none'
+                slideUrl[index].style.display = 'none'
+                // slide.style.cursor = 'default'
                 slide.style.border = '1px solid transparent'
             }
             slide.style.boxShadow = `-20px 7px 29px 20px rgba(0, 0, 0, 0.4)`
         })
+        updateDots()
+
+        
     }
+    const renderDots = () => {
+        slideDots.innerHTML = ''; // Очистка предыдущих точек
+    
+        slides.forEach((item, index) => {
+            const dotEl = document.createElement('div'); // Создание элемента для точки
+            dotEl.classList.add('slider-dots__item'); // Добавление класса для точки
+    
+            const maxIndex = slides.length - 1;
+            // Расчет размера точки: меньше на краях, больше в центре
+            const size = 6 + (maxIndex - Math.abs(index - maxIndex / 2)) * 2; 
+            dotEl.style.width = `${size}px`;
+            dotEl.style.height = `${size}px`;
+    
+            // Установка data-атрибута для индекса
+            dotEl.dataset.index = index;
+    
+            // Добавление обработчика события для переключения слайдов
+            dotEl.addEventListener('click', () => {
+                // Сброс активной точки
+                document.querySelectorAll('.slider-dots__item').forEach((dot) => {
+                    dot.classList.remove('select'); // Удаление активного класса у всех точек
+                });
+    
+                // Установка текущего индекса и добавление класса активной точки
+                currentIndex = index; // Обновляем текущий индекс
+                dotEl.classList.add('select'); // Добавление активного класса к текущей точке
+                
+                console.log(`Текущий индекс: ${currentIndex}`); // Лог текущего индекса
+                console.log(`Индекс точки: ${index}`); // Лог индекса точки
+                
+                // Вызов функции для обновления позиции слайда
+                updateSlidePosition();
+            });
+    
+            // Добавление точки в контейнер
+            slideDots.appendChild(dotEl);
+        });
+    }
+    
+    const updateDots = () => {
+        document.querySelectorAll('.slider-dots__item').forEach((dot) => {
+            dot.classList.remove('select'); // Удаление активного класса у всех точек
+        });
+    
+        const activeDot = document.querySelector(`.slider-dots__item[data-index="${currentIndex}"]`);
+        if (activeDot) {
+            activeDot.classList.add('select'); // Добавление активного класса к текущей точке
+        }
+    };
+    
+    // Вызов функции для рендеринга точек
+    renderDots();
 
     const images = document.querySelectorAll('.slides-img')
     const overlay = document.createElement('div')
