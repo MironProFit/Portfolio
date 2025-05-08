@@ -1,8 +1,9 @@
-@import 'cursor';
 @import 'font';
 @import 'mixins';
 @import 'variables';
 @import 'main';
+@import 'cursor';
+@import 'tablet';
 
 html {
     scroll-behavior: smooth;
