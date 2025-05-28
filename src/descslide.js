@@ -33,10 +33,10 @@ export const toggleDesc = () => {
 
         if (showDesc) {
             descriptionBox.classList.add('active')
-            toggleBtn.style.transform = 'rotate(45deg)'
+            toggleBtn.style.transform = 'rotate(225deg)'
         } else {
             descriptionBox.classList.remove('active')
-            toggleBtn.style.transform = 'rotate(225deg)'
+            toggleBtn.style.transform = 'rotate(45deg)'
         }
     }
 
@@ -46,12 +46,10 @@ export const toggleDesc = () => {
         toggleBtn.addEventListener('click', () => {
             showDesc = !showDesc
             renderDescriptions() // Перерисовываем описание с актуальным состоянием
-            console.log(`Показ описания: ${showDesc}`)
         })
         titleDesc.addEventListener('click', () => {
             showDesc = !showDesc
             renderDescriptions() // Перерисовываем описание с актуальным состоянием
-            console.log(`Показ описания: ${showDesc}`)
         })
 
         titleDesc.dataset.listenerAdded = true // Отмечаем, что обработчик добавлен

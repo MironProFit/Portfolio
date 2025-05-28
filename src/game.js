@@ -1,20 +1,30 @@
 export const game = () => {
+    const buttons = document.querySelectorAll('.game__btn')
+    let isAnimationActive = false
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', function handleButtonClick(e) {
+            e.stopPropagation()
+            const userSelection = button.id
+            userChoice(userSelection)
+        })
+    })
+
     function userChoice(userSelection) {
         const computerSelection = getComputerChoice()
         displayComputerChoiceAnimated()
-        const buttons = document.querySelectorAll('.game__btn')
+        disableButtons()
 
         setTimeout(() => {
             displayComputerChoice(computerSelection)
             const result = getResult(userSelection, computerSelection)
             displayResult(result)
-            ena
         }, 3000)
 
+     
         buttons.forEach((button) => {
             button.style.opacity = '0.5'
             button.style.border = '3px solid #808080'
-            button.onclick = null
         })
 
         const selectedButton = document.getElementById(userSelection)
@@ -28,14 +38,12 @@ export const game = () => {
         return choices[randomIndex]
     }
 
-    let isAnimationActive = false
-
     function displayComputerChoiceAnimated() {
         const computerChoices = ['rock', 'paper', 'scissors']
         let index = 0
         const computerChoiceImg = document.getElementById('computer-choice')
 
-        isAnimationActive = true
+        isAnimationActive = true // Устанавливаем флаг анимации
 
         const interval = setInterval(() => {
             computerChoiceImg.src = `../img/${computerChoices[index]}.png`
@@ -44,13 +52,27 @@ export const game = () => {
 
         setTimeout(() => {
             clearInterval(interval)
-            isAnimationActive = false
+            isAnimationActive = false // Сбрасываем флаг после анимации
         }, 1500)
     }
 
     function displayComputerChoice(computerSelection) {
         const computerChoiceImg = document.getElementById('computer-choice')
         computerChoiceImg.src = `../img/${computerSelection}.png`
+    }
+
+    function disableButtons() {
+        buttons.forEach((button) => {
+            button.setAttribute('aria-disabled', 'true') // Добавляем атрибут
+            button.style.pointerEvents = 'none' // Отключаем события
+        })
+    }
+
+    function enableButtons() {
+        buttons.forEach((button) => {
+            button.removeAttribute('aria-disabled') // Удаляем атрибут
+            button.style.pointerEvents = 'auto' // Включаем события
+        })
     }
 
     function getResult(userSelection, computerSelection) {
@@ -75,22 +97,23 @@ export const game = () => {
     function displayResult(result) {
         if (isAnimationActive) return
 
-        const buttons = document.querySelectorAll('.game__btn')
         const resultDisplay = document.getElementById('result')
         const computerChoiceImg = document.getElementById('computer-choice')
-        const colorResult = document.getElementById('result')
 
         resultDisplay.textContent = result
 
         setTimeout(() => {
-            buttons.forEach((button) => {
-                button.style.opacity = '1'
-                button.style.border = '3px solid #808080'
-                button.onclick = () => userChoice(button.id)
-            })
             resultDisplay.textContent = 'Результат'
-            colorResult.style.color = '#868686'
+            resultDisplay.style.color = '#868686'
             computerChoiceImg.src = `../img/smile.png`
+            enableButtons()
+            buttons.forEach((button) => {
+                button.style.opacity = '0.5'
+                button.style.border = '3px solid #808080'
+            })
         }, 3000)
     }
 }
+
+// Инициализация игры
+game()

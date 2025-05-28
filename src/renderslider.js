@@ -22,7 +22,7 @@ export const renderslider = () => {
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
-        style="transition: transform 0.3s; filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));"
+        style="transition: transform 0.3s; filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5)); "
     >
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="Dribbble-Light-Preview" class="github" transform="translate(-140.000000, -7559.000000)" fill="#7CFC00">

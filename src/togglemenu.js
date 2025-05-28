@@ -1,5 +1,4 @@
 export function toggleMenu(menu, items, burger, menuVisible) {
-    console.log('функция запущена')
 
     menuVisible = !menuVisible // Переключаем видимость меню
     menu.classList.toggle('show', menuVisible) // Добавляем/удаляем класс 'show'
@@ -39,7 +38,6 @@ export function toggleMenu(menu, items, burger, menuVisible) {
                         // menu.style.display = 'none' // Скрываем меню
 
         }, 700);
-        console.log(items.length * 100 + 50);
     }
     return menuVisible // Возвращаем текущее состояние видимости меню
 }

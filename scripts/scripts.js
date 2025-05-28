@@ -58,8 +58,6 @@ document.querySelectorAll('.about-card__btn').forEach((button) => {
                 modal.style.opacity = '1'
             }, 30)
         }
-        console.log(modalId)
-        console.log(modal)
     })
 })
 
@@ -77,7 +75,6 @@ document.querySelectorAll('.about-modal__btn.close').forEach((button) => {
 // Слайдер
 const btnAcc = document.querySelector('.slide-description__toggle')
 btnAcc.addEventListener('click', () => {
-    console.log('нажатие кнопки');
 })
 let showDescription = 0
 let currentIndex = 0
@@ -86,7 +83,6 @@ function changeSlide(direction) {
     const slides = document.querySelectorAll('.slide')
     currentIndex = (currentIndex + direction + slides.length) % slides.length
     updateSlidePosition()
-    console.log(currentIndex)
     // slide.classList.add('active');
 }
 

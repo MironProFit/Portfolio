@@ -1,73 +1,73 @@
 body {
-    cursor: url('../cursor/Arrow.ani'), auto; /* Курсор по умолчанию */
+    cursor: url('../cursor/left_ptr.cur'), auto; /* Курсор по умолчанию */
 }
 
 /* Курсор "помощь" */
 .help {
-    cursor: url('../cursor/Help.ani'), help; /* Курсор помощи */
+    cursor: url('../cursor/help.cur'), help; /* Курсор помощи */
 }
 
 /* Курсор "начало приложения" */
 .app-starting {
-    cursor: url('../cursor/AppStarting.ani'), auto; /* Курсор для начала приложения */
+    cursor: url('../cursor/left_ptr_watch.ani'), auto; /* Курсор для начала приложения */
 }
 
 /* Курсор "ожидание" */
 .wait {
-    cursor: url('../cursor/Wait.ani'), wait; /* Курсор ожидания */
+    cursor: url('../cursor/watch.ani'), wait; /* Курсор ожидания */
 }
 
 /* Курсор "крест" */
 .cross {
-    cursor: url('../cursor/Cross.ani'), crosshair; /* Курсор крест */
+    cursor: url('../cursor/cross.cur'), crosshair; /* Курсор крест */
 }
 
 /* Курсор "I-Beam" */
 .ibeam {
-    cursor: url('../cursor/IBeam.ani'), text; /* Курсор I-Beam для текстовых полей */
+    cursor: url('../cursor/text.cur'), text; /* Курсор I-Beam для текстовых полей */
 }
 
 /* Курсор "написание" */
 .handwriting {
-    cursor: url('../cursor/Handwriting.ani'), text; /* Курсор для написания */
+    cursor: url('../cursor/pencil.cur'), text; /* Курсор для написания */
 }
 
 /* Курсор "нельзя" */
 .no-drop {
-    cursor: url('../cursor/NO.ani'), not-allowed; /* Курсор "нельзя" */
+    cursor: url('../cursor/forbidden.cur'), not-allowed; /* Курсор "нельзя" */
 }
 
 /* Курсор "вверх-вниз" */
 .size-ns {
-    cursor: url('../cursor/SizeNS.ani'), ns-resize; /* Курсор "вверх-вниз" */
+    cursor: url('../cursor/size_ver.cur'), ns-resize; /* Курсор "вверх-вниз" */
 }
 
 /* Курсор "влево-вправо" */
 .size-we {
-    cursor: url('../cursor/SizeWE.ani'), ew-resize; /* Курсор "влево-вправо" */
+    cursor: url('../cursor/size_hor.cur'), ew-resize; /* Курсор "влево-вправо" */
 }
 
 /* Курсор "по диагонали (северо-запад - юго-восток)" */
 .size-nwse {
-    cursor: url('../cursor/SizeNWSE.ani'), nwse-resize; /* Курсор "по диагонали" */
+    cursor: url('../cursor/size_fdiag.cur'), nwse-resize; /* Курсор "по диагонали" */
 }
 
 /* Курсор "по диагонали (северо-восток - юго-запад)" */
 .size-nesw {
-    cursor: url('../cursor/SizeNESW.ani'), nesw-resize; /* Курсор "по диагонали" */
+    cursor: url('../cursor/size_bdiag.cur'), nesw-resize; /* Курсор "по диагонали" */
 }
 
 /* Курсор "все размеры" */
 .size-all {
-    cursor: url('../cursor/SizeAll.ani'), all-scroll; /* Курсор "все размеры" */
+    cursor: url('../cursor/size_all.cur'), all-scroll; /* Курсор "все размеры" */
 }
 
 /* Курсор "стрелка вверх" */
 .up-arrow {
-    cursor: url('../cursor/UpArrow.ani'), auto; /* Курсор "стрелка вверх" */
+    cursor: url('../cursor/up_arrow.cur'), auto; /* Курсор "стрелка вверх" */
 }
 
 /* Курсор "рука" */
 .hand {
-    cursor: url('../cursor/Hand.ani'), pointer; /* Курсор "рука" */
+    cursor: url('../cursor/pointing_hand.cur'), pointer; /* Курсор "рука" */
 }
